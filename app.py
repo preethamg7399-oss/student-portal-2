@@ -3,7 +3,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import sqlite3
 import os
 
-app = Flask(__name__)
+if __name__ == "__main__":
+    app.run()
 
 # Used to protect the login session
 app.secret_key = os.environ.get("SECRET_KEY", "local-testing-secret")
