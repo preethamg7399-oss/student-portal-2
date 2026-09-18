@@ -11,7 +11,7 @@ app.secret_key = os.environ.get("SECRET_KEY", "local-testing-secret")
 
 # Connect to database
 def get_db():
-    connection = sqlite3.connect("students.db")
+connection = sqlite3.connect("/tmp/students.db")
     connection.row_factory = sqlite3.Row
     return connection
 
